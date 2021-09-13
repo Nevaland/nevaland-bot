@@ -36,4 +36,7 @@ async def on_message(msg):
     if msg.content.startswith('img'):
         await msg.channel.send(file=discord.File('image.jpg'))
 
-client.run('')
+with open('./token.txt', 'r') as f:
+    token = f.read()
+
+client.run(token)
